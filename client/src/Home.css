@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+}
+#root{
+    width: 100vw;
+    height: 100vh;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: max-content;
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 25px 0;
+    position: fixed;
+}
+.navbar div{
+    cursor: pointer;
+}
+.btn{
+    border-radius: 1.8em !important;
+}
+
+@keyframes float {
+    0% {
+      background-position: center center;
+    }
+    50% {
+      background-position: center 40%;
+    }
+    100% {
+      background-position: center center;
+    }
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/013/079/422/original/3d-illustration-of-restaurant-3d-rendering-of-a-fast-food-restaurant-on-blue-background-3d-rendering-png.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: float 2.8s ease-in-out infinite !important;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+
+.hero .cards{
+    padding: 270px 118px 0 118px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    row-gap: 30px;
+    column-gap: 30px;
+    place-items: center center;
+}

@@ -1,0 +1,104 @@
+:root {
+    --text-gradient: linear-gradient(61deg, #217BFE 0.0%, #078EFB 27.0%, #A190FF 78.0%, #BD99FE 100.0%);
+    --gradient-linear: linear-gradient(53deg, #0260FF 9.29%, #40A2FF 48.23%, #A8BEFF 82.56%);
+    --text-_gradient: var(--text-gradient, var(--gradient-linear));
+
+    --button-gradient: linear-gradient(15deg, #217BFE 1.02%, #078EFB 28.51%, #A190FF 80.14%, #BD99FE 102.85%);
+    --button-fill: var(--button-gradient);
+    --primary-button-gradient: linear-gradient(52deg, #0844ff 11.5%, #64b8fb 129.52%);
+    --button-background: var(--button-fill, var(--primary-button-gradient));
+}
+
+*{
+    box-sizing: border-box;
+}
+
+#root{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+#signin{
+    width: 700px;
+    height: 418px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+#signup{
+    width: 700px;
+    height: 492px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.left{
+    height: 100%;
+    width: 45%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left img{
+    height: 100%;   
+    width: 100%;
+}
+
+.right{
+    height: 100%;
+    width: 60%;
+}
+
+.right form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text{
+    background: var(--text-_gradient);
+    background-clip: text;
+    -webkit-background-clip: text; 
+    /* text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;
+}
+
+.btn{
+    background: var(--button-background);
+}   
+
+
+@media only screen and (max-width: 750px) {
+    #root{
+        padding: 0 25px;        
+    }
+    #signin,#signup{
+        width: max-content;
+        padding: 0 10px;
+    }
+    .left{
+        width: 0px;
+        height: 0px;
+    }
+    .right{
+        width: 100%;
+        height: 100%;
+    }
+}
